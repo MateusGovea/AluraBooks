@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
     <link rel="stylesheet" href="styles/styles.css">
 </head>
 
@@ -55,12 +56,68 @@
 
         <section class="carrossel">
             <h2 class="carrossel__titulo">Novos lançamentos</h2>
+            <!-- Slider main container -->
+            <div class="swiper">
+                <!-- Additional required wrapper -->
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide"><img src="assets/Gestão2.svg" alt="Livro Gestao 2"></div>
+                    <div class="swiper-slide"><img src="assets/Angular.svg" alt="Livro Angular"></div>
+                    <div class="swiper-slide"><img src="assets/Guia Front-end.svg" alt="Livro Guia Front-end"></div>
+                    <div class="swiper-slide"><img src="assets/Liderança.svg" alt="Livro Liderança"></div>
+                    <div class="swiper-slide"><img src="assets/Nodejs.svg" alt="Livro NodeJs"></div>
+                    <div class="swiper-slide"><img src="assets/ReactNative.svg" alt="Livro ReactNative"></div>
+                </div>
+
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+
+            <div class="card">
+                <!--1 Linha-->
+                <div class="card__descricao">
+                    <!--1 Coluna-->
+                    <div class="descricao">
+                        <h3 class="descricao__titulo">Talvez você também se interesse por...</h3>
+                        <h2 class="descricao__titulo-livro">Angular 11 e Firebase</h2>
+                        <p class="descricao__texto">Construindo uma aplicação integrada com a plataforma Google.</p>
+                    </div>
+                    <!--2 Coluna-->
+                    <img class="descricao__imagem" src="/assets/AngularIMG.svg" alt="Imagem Angular">
+                </div>
+
+                <!--2 Linha-->
+                <div class="card__botoes">
+                    <!--1 Coluna-->
+                    <ul class="botoes">
+                        <li class="botoes__item"><img src="/assets/Favoritos.svg" alt="Favoritar Livros"></li>
+                        <li class="botoes__item"><img src="/assets/Compras.svg" alt="Adicionar no Carrinho de Compras"></li>
+                    </ul>
+                    <!--2 Coluna-->
+                    <a href="#" class="botoes__ancora">Saiba Mais</a>
+                </div>
+            </div>
         </section>
     </main>
 
     <footer>
 
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+            spaceBetween: 10,
+            slidesPerView: 3,
+            pagination: {
+                el: '.swiper-pagination',
+                type: 'bullets',
+            }
+        });
+    </script>
 </body>
 
 </html>
