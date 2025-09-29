@@ -46,6 +46,10 @@
     font-size: 14px;
 }
 
+.descricao__imagem-autor {
+    width: 49%;
+}
+
 .card__botoes {
     display: flex;
     justify-content: space-between;
